@@ -9,4 +9,15 @@
 
 	<bean id="greeter" class="com.jinseon.jdbc.Greeter" />
 
+	<bean id="memberDao" class="org.jinseon.book.example.MemberDao" />
+
+	<bean id="articleService"
+		class="org.jinseon.book.example.ArticleService">
+		<property name="memberDao" ref="memberDao" />
+	</bean>
+
+	<bean id="memberService"
+		class="org.jinseon.book.example.MemberService">
+		<property name="memberDao" ref="memberDao" />
+	</bean>
 </beans>
