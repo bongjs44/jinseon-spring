@@ -1,8 +1,7 @@
-
-bin/
-build/
-.classpath
-.gradle/
-.project
-.settings/
+.*
+!.gitignore
+bin
+build
+gradle
+gradlew*
 settings.gradle

@@ -1,16 +1,12 @@
 package org.jinseon.book.chap03;
 
-/**
- * p.60 [리스트 3.3] Member 클래스 수정<br>
- * 회원정보 도메인 오브젝트. 회원 테이블과 매핑한다.
- * 
- */
+
 public class Member {
-	String memberId; // 아이디
-	String email; // 이메일
-	String password; // 비밀번호
-	String name; // 이름
-	String registerDate; // 등록일시
+	String memberId; 
+	String email;
+	String password;
+	String name; 
+	String registerDate; 
 
 	/**
 	 * Default Constructor
@@ -18,13 +14,6 @@ public class Member {
 	public Member() {
 	}
 
-	/**
-	 * email, password, name 으로 초기화하는 컨스트럭터
-	 * 
-	 * @param email 이메일
-	 * @param password 비밀번호
-	 * @param name 이름
-	 */
 	public Member(String email, String password, String name) {
 		this.email = email;
 		this.password = password;

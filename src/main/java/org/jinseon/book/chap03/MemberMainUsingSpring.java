@@ -3,11 +3,7 @@ package org.jinseon.book.chap03;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * MemberRegisterService를 테스트한다.<br>
- * Spring ApplicationContext로 빈을 생성한다.
- * 
- */
+
 public class MemberMainUsingSpring {
 
 	public static void main(String[] args) {
@@ -16,13 +12,13 @@ public class MemberMainUsingSpring {
 		MemberRegisterService regService = ctx.getBean("memberRegisterService",
 				MemberRegisterService.class);
 
-		// registerRequest 초기화
+		// registerRequest 
 		RegisterRequest req = new RegisterRequest();
 		req.setEmail("jinseon@naver.com");
 		req.setPassword("xxxx");
 		req.setName("Jinseon");
 
-		// 회원 등록
+
 		regService.regist(req);
 	}
 }
