@@ -7,6 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:component-scan base-package="org.jinseon.article_1" />
 	<context:property-placeholder
 		location="classpath:db.properties" />
 
@@ -20,12 +21,4 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<bean id="articleDao"
-		class="org.jinseon.article.ArticleDaoImplUsingSpringJdbc">
-		<property name="jdbcTemplate" ref="jdbcTemplate" />
-	</bean>
-
-	<bean id="articleService" class="org.jinseon.article.ArticleService">
-		<property name="articleDao" ref="articleDao" />
-	</bean>
 </beans>

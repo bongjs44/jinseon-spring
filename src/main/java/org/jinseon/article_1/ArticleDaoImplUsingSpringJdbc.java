@@ -2,14 +2,17 @@ package org.jinseon.article_1;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 /**
  * Spring JDBC를 사용해서 ArticleDao를 구현
  * 
  * @author Jacob
  */
+@Repository("articleDao")
 public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	/**
 	 * 목록 가져오는 sql
@@ -35,7 +38,7 @@ public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	 * 글 삭제하는 sql
 	 */
 	static final String DELETE_ARTICLE = "DELETE FROM article WHERE articleId=?";
-
+	@Autowired
 	JdbcTemplate jdbcTemplate;
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
