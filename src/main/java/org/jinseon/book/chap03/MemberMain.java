@@ -4,7 +4,7 @@ public class MemberMain {
 
 	public static void main(String[] args) {
 		MemberDao memberDao = new MemberDao();
-		MemberRegisterService regService = new MemberRegisterService(memberDao);
+		MemberRegisterService regService = new MemberRegisterService();
 
 
 		RegisterRequest req = new RegisterRequest();

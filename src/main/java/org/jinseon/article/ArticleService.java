@@ -36,11 +36,11 @@ public class ArticleService {
 	 */
 	public void addArticle() {
 		Article article = new Article();
-		article.setTitle("중간고사가 얼마 남지 않았다(속보)");
+		article.setTitle("(속보)");
 		article.setContent(
-				"심지어 중간고사가 두번밖에 안남았다");
+				"다ekekekek다");
 		article.setUserId("1");
-		article.setName("봉진선");
+		article.setName("aaa");
 		if (articleDao.addArticle(article) > 0)
 			System.out.println("글을 추가했습니다.");
 		else

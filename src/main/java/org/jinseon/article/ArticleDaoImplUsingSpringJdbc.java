@@ -14,7 +14,7 @@ public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	/**
 	 * 목록 가져오는 sql
 	 */
-	static final String LIST_ARTICLES = "SELECT articleId, title, name, cdate FROM article LIMIT 20";
+	static final String LIST_ARTICLES = "SELECT articleId, title, name, cdate FROM article ORDER BY articleId desc LIMIT 100";
 
 	/**
 	 * 글 1개 가져오는 sql
